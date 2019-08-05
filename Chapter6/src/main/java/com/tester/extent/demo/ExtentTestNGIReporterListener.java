@@ -15,7 +15,7 @@ import java.io.File;
 import java.util.*;
 
 
-public class ExtentTestNGIReporterListenerOld implements IReporter {
+public class ExtentTestNGIReporterListener implements IReporter {
     //生成的路径以及文件名
     private static final String OUTPUT_FOLDER = "test-output/";
     private static final String FILE_NAME = "index.html";
@@ -109,7 +109,7 @@ public class ExtentTestNGIReporterListenerOld implements IReporter {
         }
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
         // 设置静态文件的DNS
-        //怎么样解决cdn.rawgit.com访问不了的情况
+        //怎么样解决cdn.rawgit.com访问不了的情况,下面一句话解决
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
 
         htmlReporter.config().setDocumentTitle("api自动化测试报告");
