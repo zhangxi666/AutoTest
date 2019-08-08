@@ -40,11 +40,10 @@ public class MyCookiesForGet {
         HttpGet get = new HttpGet(testUrl);
         // client 用来执行get方法
         DefaultHttpClient client = new DefaultHttpClient();
-
         HttpResponse response = client.execute(get);
         //response.getEntity() 获取响应的所有内容
         result = EntityUtils.toString(response.getEntity(),"utf-8");
-        System.out.println(result);
+        //System.out.println(result);
         //获取cookies信息
         this.store = client.getCookieStore();
         List<Cookie> cookieList = store.getCookies();
