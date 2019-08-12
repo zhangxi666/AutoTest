@@ -70,7 +70,7 @@ public class MyCookiesForGet {
         client.setCookieStore(this.store);
         HttpResponse response = client.execute(get);
 
-        //或i去响应状态码
+        //获取响应状态码
         int statusCode = response.getStatusLine().getStatusCode();
         System.out.println("响应状态码 = " + statusCode);
         if (statusCode == 200){
